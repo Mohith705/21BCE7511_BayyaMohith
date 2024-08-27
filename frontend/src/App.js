@@ -249,7 +249,7 @@ function App() {
   };
 
   return (
-    <div className='grid grid-cols-3 items-center justify-between gap-2 bg-gray-900'>
+    <div className='grid grid-cols-3 items-center justify-between gap-2 bg-gray-900 px-[30px]'>
 
       <div>
         <div class="game-rules-container h-screen overflow-y-auto scrollbar-thin p-4 bg-gray-100 border border-gray-300 rounded-md shadow-md">
