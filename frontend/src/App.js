@@ -66,7 +66,7 @@ function App() {
           const toLabel = getLabelForPosition(data.toX, data.toY);
           setMoveHistory(prevHistory => [
             ...prevHistory,
-            `Player ${gameState.currentPlayer} moved ${data.character} from ${fromLabel} to ${toLabel}`
+            `Player ${data.currentPlayer === "A" ? "B" : "A"} moved ${data.character} from ${fromLabel} to ${toLabel}`
           ]);
         } else if (data.type === 'chat') {
           setGameState(prevState => ({
