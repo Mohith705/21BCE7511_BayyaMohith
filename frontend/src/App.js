@@ -175,7 +175,7 @@ function App() {
         } else {
           setGameState(prevState => ({
             ...prevState,
-            message: `Hey, you can move to the occupied cell of your own`,
+            message: `You are not eligible to move to the occupied cell of your own`,
             messageType: 'occupied-message'
           }));
         }
@@ -322,7 +322,7 @@ function App() {
           </div>
         )}
 
-        <div className="board-grid grid grid-cols-5 gap-2 mb-8">
+        <div className="board-grid grid grid-cols-5 gap-2 mb-8 px-[20px]">
           {gameState.board.map((row, rowIndex) => (
             <React.Fragment key={rowIndex}>
               {row.map((cell, cellIndex) => (
@@ -356,7 +356,7 @@ function App() {
       <div className="chat-section w-full max-w-md mb-4 bg-gray-900">
         <div className="chat-box bg-gray-600 p-4 rounded-md overflow-y-auto h-[400px] mb-2" ref={chatBoxRef}>
           {gameState.chatMessages.map((msg, index) => (
-            <div key={index} className="text-sm bg-white rounded-md p-2">
+            <div key={index} className="text-sm mt-1 bg-white rounded-md p-2">
               {msg}
             </div>
           ))}
